@@ -5,13 +5,13 @@
 
     <Application.Resources>
         <Color x:Key="Green">#4abb63</Color>
-        <Color x:Key="LightGreen">#d5e5da</Color>
+        <Color x:Key="LightGreen">#e6f8ea</Color>
         <Color x:Key="Pink">#eba1ae</Color>
-        <Color x:Key="LightPink">#ebd0d5</Color>
+        <Color x:Key="LightPink">#fbdce4</Color>
         <Color x:Key="Purple">#5f49b5</Color>
-        <Color x:Key="LightPurple">#c0b6eb</Color>
+        <Color x:Key="LightPurple">#cbb9fb</Color>
         <Color x:Key="Blue">#6d93de</Color>
-        <Color x:Key="LightBlue">#d2dce8</Color>
+        <Color x:Key="LightBlue">#e1eafa</Color>
         <Color x:Key="TabBarGray">#fefcfe</Color>
         <Color x:Key="DefaultGray">#d5d5d5</Color>
 
