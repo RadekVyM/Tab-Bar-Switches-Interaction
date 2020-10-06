@@ -1,4 +1,4 @@
-# Tab-Bar-Switches-Interaction
+# Tab Bar Switches Interaction
 A **Xamarin.Forms** Shell `TabBar` based on [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
 
 ## Original design
