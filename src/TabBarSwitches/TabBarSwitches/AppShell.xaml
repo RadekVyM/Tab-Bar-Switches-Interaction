@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:TabBarSwitches"
+       x:Class="TabBarSwitches.AppShell"       
+       
+       Shell.TabBarIsVisible="False">
+
+    <local:CustomTabBar x:Name="tabBar">
+        <local:CustomTabBar.CustomView>
+            <Grid BackgroundColor="Transparent" HeightRequest="65">
+                <local:TabBarView x:Name="tabBarView" BackgroundColor="Transparent"/>
+            </Grid>
+        </local:CustomTabBar.CustomView>
+    </local:CustomTabBar>
+
+</Shell>
