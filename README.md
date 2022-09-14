@@ -1,20 +1,40 @@
 # Tab Bar Switches Interaction
-A **Xamarin.Forms** Shell `TabBar` based on [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
+
+**.NET MAUI** implementation of [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
 
 ## Original design
-[![Dribbble Design](https://github.com/RadekVyM/Tab-Bar-Switches-Interaction/blob/main/tabbarswitches%20original.gif)](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction)
 
-## My Xamarin.Forms implementation
-The entire `TabBar` is created using SkiaSharp library and uses Shell navigation. Works only on Android.
+<p align="center">
+    <a href="https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction">
+        <img src="./images/tabbarswitches_original.gif" data-canonical-src="./images/tabbarswitches_original.gif" alt="Dribble design"/>
+    </a>
+</p>
 
-<img src="https://github.com/RadekVyM/Tab-Bar-Switches-Interaction/blob/main/tabbarswitches.gif" data-canonical-src="https://github.com/RadekVyM/Tab-Bar-Switches-Interaction/blob/main/tabbarswitches.gif" width="440" height="880" />
+## My .NET MAUI implementation
 
-Feel free to take this code and do what you will, but please make sure you acknowledge myself and also the original designer.
+The application was built using .NET MAUI APIs and my library [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit).
 
-## Used packages
+<p align="center">
+    <img src="./images/android_tabbarswitches.gif" data-canonical-src="./images/android_tabbarswitches.gif" height="600" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="./images/ios_tabbarswitches.png" data-canonical-src="./images/android_tabbarswitches.gif" height="600" />
+</p>
 
-[Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms)
+<p align="center">
+    <img src="./images/windows_tabbarswitches.gif" data-canonical-src="./images/windows_tabbarswitches.gif" width="600" />
+</p>
 
-[Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials)
+### Supported platforms
 
-[SkiaSharp.Views.Forms](https://www.nuget.org/packages/SkiaSharp.Views.Forms)
+These are all the platforms I tested the app on:
+
+- Android
+- iOS (macOS)
+- Windows
+
+### Features
+
+- Use of [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit) library
+    - `SimpleShell`
+    - `ContentButton`
+- Animations
