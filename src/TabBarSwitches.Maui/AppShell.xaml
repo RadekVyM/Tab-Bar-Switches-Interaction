@@ -5,7 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TabBarSwitches.Maui"
     xmlns:pages="clr-namespace:TabBarSwitches.Maui.Views.Pages"
-    xmlns:os="clr-namespace:TabBarSwitches.Maui.OverlayShell"
     xmlns:c="clr-namespace:TabBarSwitches.Maui.Views.Controls"
     xmlns:simpleShell="clr-namespace:SimpleToolkit.SimpleShell;assembly=SimpleToolkit.SimpleShell"
     
@@ -13,7 +12,7 @@
 
     <ShellContent
         Title="Home"
-        local:ShellProperties.IconGeometry="{StaticResource HomeGeometry}"
+        local:ShellProperties.IconSource="icon_house.png"
         local:ShellProperties.PrimarySelectionColor="{StaticResource Green}"
         local:ShellProperties.SecondarySelectionColor="{StaticResource LightGreen}"
         local:ShellProperties.PageType="HomePage"
@@ -21,7 +20,7 @@
         ContentTemplate="{DataTemplate pages:HomePage}"/>
     <ShellContent
         Title="Likes"
-        local:ShellProperties.IconGeometry="{StaticResource LikesGeometry}"
+        local:ShellProperties.IconSource="icon_heart.png"
         local:ShellProperties.PrimarySelectionColor="{StaticResource Pink}"
         local:ShellProperties.SecondarySelectionColor="{StaticResource LightPink}"
         local:ShellProperties.PageType="LikesPage"
@@ -29,7 +28,7 @@
         ContentTemplate="{DataTemplate pages:LikesPage}"/>
     <ShellContent
         Title="Chats"
-        local:ShellProperties.IconGeometry="{StaticResource ChatsGeometry}"
+        local:ShellProperties.IconSource="icon_message.png"
         local:ShellProperties.PrimarySelectionColor="{StaticResource Blue}"
         local:ShellProperties.SecondarySelectionColor="{StaticResource LightBlue}"
         local:ShellProperties.PageType="ChatsPage"
@@ -37,7 +36,7 @@
         ContentTemplate="{DataTemplate pages:ChatsPage}"/>
     <ShellContent
         Title="Settings"
-        local:ShellProperties.IconGeometry="{StaticResource SettingsGeometry}"
+        local:ShellProperties.IconSource="icon_settings.png"
         local:ShellProperties.PrimarySelectionColor="{StaticResource Purple}"
         local:ShellProperties.SecondarySelectionColor="{StaticResource LightPurple}"
         local:ShellProperties.PageType="SettingsPage"

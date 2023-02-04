@@ -4,8 +4,8 @@ namespace TabBarSwitches.Maui
 {
     public static class ShellProperties
     {
-        public static readonly BindableProperty IconGeometryProperty =
-            BindableProperty.CreateAttached("IconGeometry", typeof(Geometry), typeof(BaseShellItem), default(Geometry));
+        public static readonly BindableProperty IconSourceProperty =
+            BindableProperty.CreateAttached("IconSource", typeof(ImageSource), typeof(BaseShellItem), default(Geometry));
 
         public static readonly BindableProperty PrimarySelectionColorProperty =
             BindableProperty.CreateAttached("PrimarySelectionColor", typeof(Color), typeof(BaseShellItem), Colors.Black);
@@ -16,14 +16,14 @@ namespace TabBarSwitches.Maui
         public static readonly BindableProperty PageTypeProperty =
             BindableProperty.CreateAttached("PageType", typeof(PageType), typeof(BaseShellItem), default(PageType));
 
-        public static Geometry GetIconGeometry(BindableObject item)
+        public static ImageSource GetIconSource(BindableObject item)
         {
-            return (Geometry)item.GetValue(IconGeometryProperty);
+            return (ImageSource)item.GetValue(IconSourceProperty);
         }
 
-        public static void SetIconGeometry(BindableObject item, Geometry value)
+        public static void SetIconSource(BindableObject item, ImageSource value)
         {
-            item.SetValue(IconGeometryProperty, value);
+            item.SetValue(IconSourceProperty, value);
         }
 
         public static Color GetPrimarySelectionColor(BindableObject item)

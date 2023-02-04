@@ -33,15 +33,11 @@
                                 ColumnDefinitions="60, *"
                                 HeightRequest="50"
                                 CompressedLayout.IsHeadless="True">
-                                <ContentView
+                                <simpleCore:Icon
                                     HeightRequest="25" WidthRequest="25"
                                     HorizontalOptions="Center" VerticalOptions="Center"
-                                    CompressedLayout.IsHeadless="True">
-                                    <Path
-                                        Data="{Binding IconGeometry}"
-                                        Aspect="Uniform"
-                                        Fill="{Binding PrimarySelectionColor}"/>
-                                </ContentView>
+                                    Source="{Binding IconSource}"
+                                    TintColor="{Binding PrimarySelectionColor}"/>
                                 <ContentView
                                     Grid.Column="1"
                                     VerticalOptions="Center" HorizontalOptions="Center"

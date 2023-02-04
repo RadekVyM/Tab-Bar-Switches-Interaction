@@ -135,15 +135,14 @@ namespace TabBarSwitches.Maui.Views.Controls
         {
             var item = button.BindingContext as TabBarItem;
             var grid = button.Content as Grid;
-            var pathContentView = grid.Children[0] as ContentView;
+            var icon = grid.Children[0] as Icon;
             var labelContentView = grid.Children[1] as ContentView;
-            var path = pathContentView.Content as Microsoft.Maui.Controls.Shapes.Path;
             var label = labelContentView.Content as Label;
 
             if (item == selectedItem)
             {
                 button.Background = item.SecondarySelectionColor;
-                path.Fill = item.PrimarySelectionColor;
+                icon.TintColor = item.PrimarySelectionColor;
                 label.IsVisible = true;
             }
             else
@@ -151,7 +150,7 @@ namespace TabBarSwitches.Maui.Views.Controls
                 App.Current.Resources.TryGetValue("DefaultGray", out object defaultColor);
 
                 button.Background = Colors.Transparent;
-                path.Fill = defaultColor as Color;
+                icon.TintColor = defaultColor as Color;
                 label.IsVisible = false;
             }
         }
@@ -184,7 +183,7 @@ namespace TabBarSwitches.Maui.Views.Controls
                 .Select(s => new TabBarItem(
                     s.Route,
                     s.Title,
-                    ShellProperties.GetIconGeometry(s),
+                    ShellProperties.GetIconSource(s),
                     ShellProperties.GetPageType(s),
                     ShellProperties.GetPrimarySelectionColor(s),
                     ShellProperties.GetSecondarySelectionColor(s)))
@@ -197,6 +196,6 @@ namespace TabBarSwitches.Maui.Views.Controls
             tabBar.UpdateControl();
         }
 
-        public record TabBarItem(string Route, string Title, Geometry IconGeometry, PageType PageType, Color PrimarySelectionColor, Color SecondarySelectionColor);
+        public record TabBarItem(string Route, string Title, ImageSource IconSource, PageType PageType, Color PrimarySelectionColor, Color SecondarySelectionColor);
     }
 }
