@@ -12,7 +12,7 @@
 
 ## My .NET MAUI implementation
 
-The application was built using .NET MAUI APIs and my library [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit).
+The application was built using .NET MAUI APIs and my [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit) library.
 
 <p align="center">
     <img src="./images/android_tabbarswitches.gif" data-canonical-src="./images/android_tabbarswitches.gif" height="600" />
@@ -37,4 +37,5 @@ These are all the platforms I tested the app on:
 - Use of [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit) library
     - `SimpleShell`
     - `ContentButton`
+    - `Icon`
 - Animations
