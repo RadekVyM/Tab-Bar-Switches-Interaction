@@ -18,6 +18,10 @@ namespace TabBarSwitches.Maui
                 .UseSimpleShell()
                 .UseSimpleToolkit();
 
+#if ANDROID || IOS
+            builder.DisplayContentBehindBars();
+#endif
+
             return builder.Build();
         }
     }

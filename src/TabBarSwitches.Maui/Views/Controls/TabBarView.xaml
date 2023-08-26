@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView
     x:Class="TabBarSwitches.Maui.Views.Controls.TabBarView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -9,7 +9,7 @@
     <Border
         MaximumWidthRequest="{OnPlatform WinUI=760}" MinimumWidthRequest="{OnPlatform Default=240, WinUI=340}"
         Background="{StaticResource TabBarColor}"
-        Stroke="{StaticResource TabBarColor}"
+        StrokeThickness="0"
         Padding="15,10">
         <Border.StrokeShape>
             <RoundRectangle CornerRadius="25,25,0,0"/>

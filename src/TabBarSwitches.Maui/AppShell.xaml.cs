@@ -1,10 +1,24 @@
-﻿namespace TabBarSwitches.Maui
+﻿using SimpleToolkit.Core;
+
+namespace TabBarSwitches.Maui
 {
     public partial class AppShell : SimpleToolkit.SimpleShell.SimpleShell
     {
         public AppShell()
         {
             InitializeComponent();
+
+            Loaded += AppShellLoaded;
+        }
+
+        private static void AppShellLoaded(object sender, EventArgs e)
+        {
+            var shell = sender as AppShell;
+
+            shell.Window.SubscribeToSafeAreaChanges(safeArea =>
+            {
+                shell.rootContainer.Padding = new Thickness(safeArea.Left, 0, safeArea.Right, safeArea.Bottom);
+            });
         }
 
         private void TabBarViewCurrentPageChanged(object sender, TabBarEventArgs e)

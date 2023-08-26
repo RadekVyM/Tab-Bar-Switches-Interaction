@@ -8,45 +8,57 @@
     xmlns:c="clr-namespace:TabBarSwitches.Maui.Views.Controls"
     xmlns:simpleShell="clr-namespace:SimpleToolkit.SimpleShell;assembly=SimpleToolkit.SimpleShell"
     
-    x:Name="thisShell">
+    x:Name="thisShell"
 
-    <ShellContent
-        Title="Home"
-        local:ShellProperties.IconSource="icon_house.png"
-        local:ShellProperties.PrimarySelectionColor="{StaticResource Green}"
-        local:ShellProperties.SecondarySelectionColor="{StaticResource LightGreen}"
-        local:ShellProperties.PageType="HomePage"
-        Route="HomePage"
-        ContentTemplate="{DataTemplate pages:HomePage}"/>
-    <ShellContent
-        Title="Likes"
-        local:ShellProperties.IconSource="icon_heart.png"
-        local:ShellProperties.PrimarySelectionColor="{StaticResource Pink}"
-        local:ShellProperties.SecondarySelectionColor="{StaticResource LightPink}"
-        local:ShellProperties.PageType="LikesPage"
-        Route="LikesPage"
-        ContentTemplate="{DataTemplate pages:LikesPage}"/>
-    <ShellContent
-        Title="Chats"
-        local:ShellProperties.IconSource="icon_message.png"
-        local:ShellProperties.PrimarySelectionColor="{StaticResource Blue}"
-        local:ShellProperties.SecondarySelectionColor="{StaticResource LightBlue}"
-        local:ShellProperties.PageType="ChatsPage"
-        Route="ChatsPage"
-        ContentTemplate="{DataTemplate pages:ChatsPage}"/>
-    <ShellContent
-        Title="Settings"
-        local:ShellProperties.IconSource="icon_settings.png"
-        local:ShellProperties.PrimarySelectionColor="{StaticResource Purple}"
-        local:ShellProperties.SecondarySelectionColor="{StaticResource LightPurple}"
-        local:ShellProperties.PageType="SettingsPage"
-        Route="SettingsPage"
-        ContentTemplate="{DataTemplate pages:SettingsPage}"/>
+    Background="White">
+
+    <Tab>
+        <ShellContent
+            Title="Home"
+            local:ShellProperties.IconSource="icon_house.png"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Green}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource LightGreen}"
+            local:ShellProperties.PageType="HomePage"
+            Route="HomePage"
+            ContentTemplate="{DataTemplate pages:HomePage}"/>
+    </Tab>
+    <Tab>
+        <ShellContent
+            Title="Likes"
+            local:ShellProperties.IconSource="icon_heart.png"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Pink}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource LightPink}"
+            local:ShellProperties.PageType="LikesPage"
+            Route="LikesPage"
+            ContentTemplate="{DataTemplate pages:LikesPage}"/>
+    </Tab>
+    <Tab>
+        <ShellContent
+            Title="Chats"
+            local:ShellProperties.IconSource="icon_message.png"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Blue}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource LightBlue}"
+            local:ShellProperties.PageType="ChatsPage"
+            Route="ChatsPage"
+            ContentTemplate="{DataTemplate pages:ChatsPage}"/>
+    </Tab>
+    <Tab>
+        <ShellContent
+            Title="Settings"
+            local:ShellProperties.IconSource="icon_settings.png"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Purple}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource LightPurple}"
+            local:ShellProperties.PageType="SettingsPage"
+            Route="SettingsPage"
+            ContentTemplate="{DataTemplate pages:SettingsPage}"/>
+    </Tab>
 
     <simpleShell:SimpleShell.RootPageContainer>
-        <Grid>
+        <Grid
+            x:Name="rootContainer">
             <simpleShell:SimpleNavigationHost/>
             <c:TabBarView
+                Margin="0, 0, 0, -1"
                 ShellItems="{Binding Path=ShellContents, Source={x:Reference thisShell}}"
                 VerticalOptions="End" HorizontalOptions="Fill"
                 CurrentPageSelectionChanged="TabBarViewCurrentPageChanged"/>
