@@ -2,6 +2,10 @@
 
 **.NET MAUI** implementation of [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
 
+
+https://github.com/RadekVyM/Tab-Bar-Switches-Interaction/assets/65116078/047f33ff-80e2-4432-b142-05cffe6b59bc
+
+
 This project demonstrates how to create a **custom tab bar** and integrate it with the `SimpleShell` control from [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit).
 
 ## Original design
