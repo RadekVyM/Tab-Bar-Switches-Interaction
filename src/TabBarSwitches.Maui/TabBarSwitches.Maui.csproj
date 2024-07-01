@@ -34,8 +34,10 @@
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="SimpleToolkit.Core" Version="4.0.0" />
-		<PackageReference Include="SimpleToolkit.SimpleShell" Version="4.1.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="SimpleToolkit.Core" Version="5.0.0" />
+		<PackageReference Include="SimpleToolkit.SimpleShell" Version="4.1.3" />
 	</ItemGroup>
 
 	<ItemGroup>

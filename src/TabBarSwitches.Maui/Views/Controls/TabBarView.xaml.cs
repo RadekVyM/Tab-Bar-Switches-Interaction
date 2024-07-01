@@ -32,6 +32,7 @@ namespace TabBarSwitches.Maui.Views.Controls
             absoluteLayout.SizeChanged += AbsoluteLayoutSizeChanged;
         }
 
+
         private void UpdateControl()
         {
             if (!absoluteLayout.Children.Any())
@@ -43,7 +44,7 @@ namespace TabBarSwitches.Maui.Views.Controls
             for (int i = 0; i < absoluteLayout.Children.Count; i++)
             {
                 var itemView = absoluteLayout.Children[i] as Border;
-                var width = itemView.BindingContext == selectedItem ? selectedItemWidth : defaultItemWidth;
+                var width = (itemView.BindingContext as TabBarItem) == selectedItem ? selectedItemWidth : defaultItemWidth;
                 var rect = new Rect(left, 0, width, itemHeight);
                 
                 AbsoluteLayout.SetLayoutBounds(itemView, rect); // This works on Windows but does not work on Android
