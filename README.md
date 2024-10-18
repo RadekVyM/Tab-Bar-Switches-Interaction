@@ -3,7 +3,7 @@
 **.NET MAUI** tab bar inspired by the [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
 
 
-https://github.com/user-attachments/assets/d50adde0-4611-447b-8585-88e97914d093
+https://github.com/user-attachments/assets/3381a7d4-312a-4a92-a449-b5bfd0866fd7
 
 
 This project demonstrates how to create a **custom tab bar** and integrate it with the `SimpleShell` control from [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit).
