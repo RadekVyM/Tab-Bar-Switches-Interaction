@@ -4,9 +4,12 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="Primary">#512BD4</Color>
-    <Color x:Key="Secondary">#DFD8F7</Color>
-    <Color x:Key="Tertiary">#2B0B98</Color>
+    <Color x:Key="Primary">#5ea7db</Color>
+    <Color x:Key="Secondary">#a9d5f5</Color>
+    <Color x:Key="Tertiary">#74b5e3</Color>
+    <Color x:Key="Surface">#ffffff</Color>
+    <Color x:Key="SurfaceContainer">#edf5fa</Color>
+    <Color x:Key="SurfaceContainerDim">#dcebf5</Color>
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>
     <Color x:Key="Gray100">#E1E1E1</Color>
@@ -40,16 +43,5 @@
     <Color x:Key="Blue100Accent">#3E8EED</Color>
     <Color x:Key="Blue200Accent">#72ACF1</Color>
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
-
-    <Color x:Key="Green">#4abb63</Color>
-    <Color x:Key="LightGreen">#e6f8ea</Color>
-    <Color x:Key="Pink">#eba1ae</Color>
-    <Color x:Key="LightPink">#fbdce4</Color>
-    <Color x:Key="Purple">#5f49b5</Color>
-    <Color x:Key="LightPurple">#cbb9fb</Color>
-    <Color x:Key="Blue">#6d93de</Color>
-    <Color x:Key="LightBlue">#e1eafa</Color>
-    <Color x:Key="TabBarColor">#ffffff</Color>
-    <Color x:Key="DefaultGray">#e5e5e5</Color>
 
 </ResourceDictionary>

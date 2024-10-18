@@ -1,6 +1,6 @@
 # Tab Bar Switches Interaction
 
-**.NET MAUI** implementation of [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
+**.NET MAUI** tab bar inspired by the [Tab Bar Switches Interaction](https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction) design by [Ronas IT | UI/UX Team](https://dribbble.com/ronasit).
 
 
 https://github.com/RadekVyM/Tab-Bar-Switches-Interaction/assets/65116078/047f33ff-80e2-4432-b142-05cffe6b59bc
@@ -9,6 +9,8 @@ https://github.com/RadekVyM/Tab-Bar-Switches-Interaction/assets/65116078/047f33f
 This project demonstrates how to create a **custom tab bar** and integrate it with the `SimpleShell` control from [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit).
 
 ## Original design
+
+Many thanks to [Ronas IT | UI/UX Team](https://dribbble.com/ronasit) for their beautiful original work.
 
 <p align="center">
     <a href="https://dribbble.com/shots/14028381-Tab-Bar-Switches-Interaction">
@@ -33,11 +35,7 @@ Here are some resources to learn more about .NET MAUI:
 Only .NET MAUI APIs and my [SimpleToolkit](https://github.com/RadekVyM/SimpleToolkit) library were used to create this sample.
 
 <p align="center">
-    <img src="./images/android_tabbarswitches.webp" width="220">
+    <img src="./images/android_tabbarswitches.webp" width="219">
     &nbsp;&nbsp;
     <img src="./images/ios_tabbarswitches.webp" width="226">
-</p>
-
-<p align="center">
-    <img src="./images/windows_tabbarswitches.gif" data-canonical-src="./images/windows_tabbarswitches.gif" width="500" />
 </p>

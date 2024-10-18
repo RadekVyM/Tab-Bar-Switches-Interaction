@@ -3,5 +3,11 @@
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TabBarSwitches.Maui.Views.Pages"
-             BackgroundColor="{DynamicResource Green}">
+             BackgroundColor="{StaticResource Surface}">
+    <Label
+        Text="Home Page"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        TextColor="{StaticResource Primary}"
+        FontSize="18" />
 </ContentPage>

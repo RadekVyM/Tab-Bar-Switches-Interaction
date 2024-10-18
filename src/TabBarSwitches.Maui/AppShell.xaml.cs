@@ -17,7 +17,8 @@ namespace TabBarSwitches.Maui
 
             shell.Window.SubscribeToSafeAreaChanges(safeArea =>
             {
-                shell.rootContainer.Padding = new Thickness(safeArea.Left, 0, safeArea.Right, safeArea.Bottom);
+                shell.rootContainer.Padding = new Thickness(safeArea.Left, 0, safeArea.Right, 0);
+                shell.tabBarView.InnerPadding = new Thickness(0, 0, 0, safeArea.Bottom);
             });
         }
 

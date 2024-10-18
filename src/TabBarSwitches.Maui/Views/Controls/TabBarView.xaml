@@ -7,51 +7,48 @@
     xmlns:simpleCore="clr-namespace:SimpleToolkit.Core;assembly=SimpleToolkit.Core">
 
     <Border
+        x:Name="rootBorder"
         MaximumWidthRequest="{OnPlatform WinUI=760}" MinimumWidthRequest="{OnPlatform Default=240, WinUI=340}"
-        Background="{StaticResource TabBarColor}"
-        StrokeThickness="0"
-        Padding="15,10">
+        Background="{StaticResource SurfaceContainer}"
+        StrokeThickness="0">
         <Border.StrokeShape>
-            <RoundRectangle CornerRadius="25,25,0,0"/>
+            <RoundRectangle CornerRadius="10,10,0,0"/>
         </Border.StrokeShape>
         <AbsoluteLayout
             x:Name="absoluteLayout"
             HeightRequest="50"
-            Margin="0" Padding="0"
+            Margin="10" Padding="0"
             Background="Transparent">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
-                    <Border
-                        StrokeThickness="0">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="25"/>
-                        </Border.StrokeShape>
-                        <simpleCore:ContentButton
-                            Clicked="ButtonClicked"
-                            Background="{Binding SecondarySelectionColor}">
-                            <Grid
-                                ColumnDefinitions="60, *"
-                                HeightRequest="50"
-                                CompressedLayout.IsHeadless="True">
-                                <simpleCore:Icon
-                                    HeightRequest="25" WidthRequest="25"
-                                    HorizontalOptions="Center" VerticalOptions="Center"
-                                    Source="{Binding IconSource}"
-                                    TintColor="{Binding PrimarySelectionColor}"/>
-                                <ContentView
-                                    Grid.Column="1"
-                                    VerticalOptions="Center" HorizontalOptions="Center"
-                                    CompressedLayout.IsHeadless="True"
-                                    Margin="0,0,30,0">
-                                    <Label
-                                        Text="{Binding Title}"
-                                        TextColor="{Binding PrimarySelectionColor}"
-                                        FontAttributes="Bold"
-                                        LineBreakMode="NoWrap"/>
-                                </ContentView>
-                            </Grid>
-                        </simpleCore:ContentButton>
-                    </Border>
+                    <simpleCore:ContentButton
+                        Clicked="ButtonClicked">
+                        <simpleCore:ContentButton.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </simpleCore:ContentButton.StrokeShape>
+                        <Grid
+                            ColumnDefinitions="50, *"
+                            HeightRequest="50"
+                            CompressedLayout.IsHeadless="True">
+                            <simpleCore:Icon
+                                HeightRequest="22" WidthRequest="22"
+                                HorizontalOptions="Center" VerticalOptions="Center"
+                                Source="{Binding IconSource}"
+                                TintColor="{Binding PrimarySelectionColor}"/>
+                            <ContentView
+                                Grid.Column="1"
+                                VerticalOptions="Center" HorizontalOptions="Center"
+                                CompressedLayout.IsHeadless="True"
+                                Margin="0,0,30,0">
+                                <Label
+                                    Text="{Binding Title}"
+                                    TextColor="{Binding PrimarySelectionColor}"
+                                    FontFamily="BoldFont"
+                                    LineBreakMode="NoWrap"
+                                    FontSize="16"/>
+                            </ContentView>
+                        </Grid>
+                    </simpleCore:ContentButton>
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </AbsoluteLayout>

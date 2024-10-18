@@ -10,14 +10,14 @@
     
     x:Name="thisShell"
 
-    Background="White">
+    Background="{StaticResource Surface}">
 
     <Tab>
         <ShellContent
             Title="Home"
             local:ShellProperties.IconSource="icon_house.png"
-            local:ShellProperties.PrimarySelectionColor="{StaticResource Green}"
-            local:ShellProperties.SecondarySelectionColor="{StaticResource LightGreen}"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Primary}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource SurfaceContainerDim}"
             local:ShellProperties.PageType="HomePage"
             Route="HomePage"
             ContentTemplate="{DataTemplate pages:HomePage}"/>
@@ -26,8 +26,8 @@
         <ShellContent
             Title="Likes"
             local:ShellProperties.IconSource="icon_heart.png"
-            local:ShellProperties.PrimarySelectionColor="{StaticResource Pink}"
-            local:ShellProperties.SecondarySelectionColor="{StaticResource LightPink}"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Primary}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource SurfaceContainerDim}"
             local:ShellProperties.PageType="LikesPage"
             Route="LikesPage"
             ContentTemplate="{DataTemplate pages:LikesPage}"/>
@@ -36,8 +36,8 @@
         <ShellContent
             Title="Chats"
             local:ShellProperties.IconSource="icon_message.png"
-            local:ShellProperties.PrimarySelectionColor="{StaticResource Blue}"
-            local:ShellProperties.SecondarySelectionColor="{StaticResource LightBlue}"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Primary}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource SurfaceContainerDim}"
             local:ShellProperties.PageType="ChatsPage"
             Route="ChatsPage"
             ContentTemplate="{DataTemplate pages:ChatsPage}"/>
@@ -46,8 +46,8 @@
         <ShellContent
             Title="Settings"
             local:ShellProperties.IconSource="icon_settings.png"
-            local:ShellProperties.PrimarySelectionColor="{StaticResource Purple}"
-            local:ShellProperties.SecondarySelectionColor="{StaticResource LightPurple}"
+            local:ShellProperties.PrimarySelectionColor="{StaticResource Primary}"
+            local:ShellProperties.SecondarySelectionColor="{StaticResource SurfaceContainerDim}"
             local:ShellProperties.PageType="SettingsPage"
             Route="SettingsPage"
             ContentTemplate="{DataTemplate pages:SettingsPage}"/>
@@ -58,7 +58,7 @@
             x:Name="rootContainer">
             <simpleShell:SimpleNavigationHost/>
             <c:TabBarView
-                Margin="0, 0, 0, -1"
+                x:Name="tabBarView"
                 ShellItems="{Binding Path=ShellContents, Source={x:Reference thisShell}}"
                 VerticalOptions="End" HorizontalOptions="Fill"
                 CurrentPageSelectionChanged="TabBarViewCurrentPageChanged"/>

@@ -1,28 +1,31 @@
 ﻿using SimpleToolkit.Core;
 using SimpleToolkit.SimpleShell;
 
-namespace TabBarSwitches.Maui
+namespace TabBarSwitches.Maui;
+
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                })
-                .UseSimpleShell()
-                .UseSimpleToolkit();
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("Nunito-SemiBold.ttf", "RegularFont");
+                fonts.AddFont("Nunito-Bold.ttf", "BoldFont");
+            })
+            .UseSimpleShell()
+            .UseSimpleToolkit();
 
 #if ANDROID || IOS
-            builder.DisplayContentBehindBars();
+        builder.DisplayContentBehindBars();
 #endif
 
-            return builder.Build();
-        }
+#if ANDROID
+        builder.SetDefaultNavigationBarAppearance(color: Colors.Transparent);
+#endif
+
+        return builder.Build();
     }
 }

@@ -15,8 +15,17 @@ namespace TabBarSwitches.Maui.Views.Controls
 
         public event Action<object, TabBarEventArgs> CurrentPageSelectionChanged;
 
+        public static readonly BindableProperty InnerPaddingProperty =
+            BindableProperty.Create(nameof(InnerPadding), typeof(Thickness), typeof(TabBarView), defaultValue: Thickness.Zero, propertyChanged: OnInnerPaddingChanged);
+
         public static readonly BindableProperty ShellItemsProperty =
             BindableProperty.Create(nameof(ShellItems), typeof(IEnumerable<BaseShellItem>), typeof(TabBarView), null, BindingMode.OneWay, propertyChanged: ShellItemsPropertyChanged);
+
+        public Thickness InnerPadding
+        {
+            get => (Thickness)GetValue(InnerPaddingProperty);
+            set => SetValue(InnerPaddingProperty, value);
+        }
 
         public IEnumerable<BaseShellItem> ShellItems
         {
@@ -43,7 +52,7 @@ namespace TabBarSwitches.Maui.Views.Controls
 
             for (int i = 0; i < absoluteLayout.Children.Count; i++)
             {
-                var itemView = absoluteLayout.Children[i] as Border;
+                var itemView = absoluteLayout.Children[i] as ContentButton;
                 var width = (itemView.BindingContext as TabBarItem) == selectedItem ? selectedItemWidth : defaultItemWidth;
                 var rect = new Rect(left, 0, width, itemHeight);
                 
@@ -53,7 +62,7 @@ namespace TabBarSwitches.Maui.Views.Controls
                 left += width;
                 left += spacing;
 
-                UpdateContentButton(itemView.Content as ContentButton);
+                UpdateContentButton(itemView);
             }
         }
 
@@ -67,7 +76,7 @@ namespace TabBarSwitches.Maui.Views.Controls
 
             for (int i = 0; i < absoluteLayout.Children.Count; i++)
             {
-                var itemView = absoluteLayout.Children[i] as Border;
+                var itemView = absoluteLayout.Children[i] as ContentButton;
 
                 if (itemView.BindingContext == newSelected || itemView.BindingContext == oldSelected)
                 {
@@ -85,7 +94,7 @@ namespace TabBarSwitches.Maui.Views.Controls
 
                         if (itemView.BindingContext == newSelected)
                         {
-                            UpdateContentButton(itemView.Content as ContentButton);
+                            UpdateContentButton(itemView);
                         }
 
                         AbsoluteLayout.SetLayoutBounds(itemView, rect);
@@ -94,7 +103,7 @@ namespace TabBarSwitches.Maui.Views.Controls
                     {
                         if (itemView.BindingContext != newSelected)
                         {
-                            UpdateContentButton(itemView.Content as ContentButton);
+                            UpdateContentButton(itemView);
                         }
                     }));
 
@@ -126,7 +135,7 @@ namespace TabBarSwitches.Maui.Views.Controls
                 left += defaultItemWidth + itemsSpacing;
             }
 
-            animation.Commit(this, "Animation", finished: (v, b) =>
+            animation.Commit(this, "Animation", easing: Easing.SinInOut, finished: (v, b) =>
             {
                 UpdateControl();
             });
@@ -148,7 +157,7 @@ namespace TabBarSwitches.Maui.Views.Controls
             }
             else
             {
-                App.Current.Resources.TryGetValue("DefaultGray", out object defaultColor);
+                App.Current.Resources.TryGetValue("Secondary", out object defaultColor);
 
                 button.Background = Colors.Transparent;
                 icon.TintColor = defaultColor as Color;
@@ -195,6 +204,16 @@ namespace TabBarSwitches.Maui.Views.Controls
             tabBar.selectedItem = tabBarItems.FirstOrDefault();
 
             tabBar.UpdateControl();
+        }
+
+        private static void OnInnerPaddingChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var tabBarView = bindable as TabBarView;
+
+            if (newValue is not Thickness padding)
+                return;
+
+            tabBarView.rootBorder.Padding = padding;
         }
 
         public record TabBarItem(string Route, string Title, ImageSource IconSource, PageType PageType, Color PrimarySelectionColor, Color SecondarySelectionColor);
